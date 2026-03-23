@@ -426,6 +426,28 @@ a:hover { color: var(--text-primary); }
     color: #fff;
 }
 
+.card-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.details-link {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.details-link:hover {
+    color: var(--accent);
+}
+
+.purchase-btn-large {
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+}
+
 .details-page {
     padding: 120px 5% 60px;
     min-height: calc(100vh - 100px);

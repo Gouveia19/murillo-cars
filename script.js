@@ -71,7 +71,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     <p class="description">${car.desc}</p>
                     <div class="price-row">
                         <span class="price" aria-label="Preço: ${car.price}">${car.price}</span>
-                        <a href="details.html?id=${car.id}" class="buy-button" aria-label="Ver página de detalhes completas do ${car.name}">Detalhes</a>
+                        <div class="card-actions">
+                            <a href="details.html?id=${car.id}" class="details-link" aria-label="Ver página de detalhes completas do ${car.name}">Detalhes</a>
+                            <button class="buy-button purchase-btn" aria-label="Comprar ${car.name}" onclick="alert('Iniciando o processo de compra do ${car.name}.')">Comprar</button>
+                        </div>
                     </div>
                 </div>
             `;
@@ -99,6 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <p class="details-desc">${car.desc}</p>
                         <p class="details-price" aria-label="Preço: ${car.price}">${car.price}</p>
                         <div class="details-actions">
+                            <button class="buy-button purchase-btn-large" aria-label="Comprar ${car.name} Agora" onclick="alert('Iniciando o processo de compra do ${car.name}. Nossos consultores entrarão em contato.')">Comprar Agora</button>
                             <a href="index.html#contact" class="cta-button" aria-label="Agendar Test Drive do ${car.name}">Solicitar Test Drive</a>
                             <a href="index.html#showroom" class="back-link" aria-label="Navegar de volta para a coleção do showroom">← Voltar ao Catálogo</a>
                         </div>
