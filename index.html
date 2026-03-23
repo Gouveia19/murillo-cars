@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Murillo Cars | Veículos Premium</title>
+    <meta name="description" content="Descubra carros de luxo e esportivos premium na Murillo Cars.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo" aria-hidden="true">Murillo Cars</div>
+        <nav aria-label="Menu principal">
+            <ul class="nav-links">
+                <li><a href="index.html#home">Início</a></li>
+                <li><a href="index.html#showroom">Catálogo</a></li>
+                <li><a href="index.html#sell">Vender Veículo</a></li>
+                <li><a href="index.html#about">Sobre</a></li>
+                <li><a href="index.html#contact">Contato</a></li>
+            </ul>
+        </nav>
+        <button id="btn-test-drive" class="cta-button" aria-label="Ir para formulário de agendamento de test drive">Agendar Test Drive</button>
+    </header>
+
+    <main>
+        <h1 class="visually-hidden">Murillo Cars - Catálogo e Venda de Veículos Premium</h1>
+
+        <section id="home" class="hero" aria-label="Destaques">
+            <div class="carousel" id="carousel">
+                <article class="slide active">
+                    <img src="images/hero1.png" alt="Ferrari vermelha esportiva de luxo em estúdio escuro" class="slide-bg-img">
+                    <div class="slide-content">
+                        <h2>Performance Inigualável</h2>
+                        <p>Sinta a emoção dos nossos principais carros esportivos.</p>
+                    </div>
+                </article>
+                <article class="slide">
+                    <img src="images/hero2.png" alt="SUV Lamborghini preta luxuosa em ambiente premium escuro" class="slide-bg-img">
+                    <div class="slide-content">
+                        <h2>Luxo Redefinido</h2>
+                        <p>Domine a estrada com elegância e conforto supremos.</p>
+                    </div>
+                </article>
+                
+                <button class="carousel-control prev" id="prevBtn" aria-label="Slide anterior">&#10094;</button>
+                <button class="carousel-control next" id="nextBtn" aria-label="Próximo slide">&#10095;</button>
+                
+                <div class="carousel-indicators" id="indicators" aria-label="Navegação do carrossel">
+                    <button class="dot active" aria-label="Exibir slide 1"></button>
+                    <button class="dot" aria-label="Exibir slide 2"></button>
+                </div>
+            </div>
+        </section>
+
+        <section id="showroom" class="showroom" aria-label="Catálogo de Veículos">
+            <div class="section-header">
+                <h2>Nosso Catálogo Exclusivo</h2>
+                <p>Explore nossa seleção de veículos minuciosamente inspecionados.</p>
+            </div>
+            <div class="product-grid" id="catalog-grid" aria-live="polite">
+                <!-- Javascript will inject 10 product cards here. -->
+            </div>
+        </section>
+
+        <section id="sell" class="sell-section" aria-labelledby="sell-title">
+            <div class="sell-container">
+                <div class="section-header">
+                    <h2 id="sell-title">Venda seu Carro</h2>
+                    <p>Submeta as métricas do seu veículo premium para avaliação minuciosa. Conduziremos a negociação com máxima transparência.</p>
+                </div>
+                <form id="sell-form" class="sell-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="sell-brand">Marca e Modelo</label>
+                            <input type="text" id="sell-brand" required placeholder="Ex: Porsche 911 Carrera" aria-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="sell-year">Ano de Fabricação</label>
+                            <input type="number" id="sell-year" required min="1950" max="2027" placeholder="Ex: 2022" aria-required="true">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="sell-mileage">Quilometragem Acumulada (km)</label>
+                            <input type="number" id="sell-mileage" required min="0" placeholder="Ex: 15000" aria-required="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="sell-price">Preço Alvo (R$)</label>
+                            <input type="number" id="sell-price" required min="1000" placeholder="Ex: 400000" aria-required="true">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="sell-desc">Detalhes Adicionais e Histórico do Veículo</label>
+                        <textarea id="sell-desc" rows="4" required placeholder="Descreva manutenções recentes, blindagem, ou histórico de colecionador..." aria-required="true"></textarea>
+                    </div>
+                    <button type="submit" class="submit-button" aria-label="Enviar formulário de repasse do carro">Solicitar Avaliação</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="about" class="about" aria-labelledby="about-title">
+            <div class="about-container">
+                <h2 id="about-title">Sobre a Murillo Cars</h2>
+                <p>
+                    Fundada com a missão de redefinir o mercado de automóveis de luxo e veículos criteriosamente selecionados, 
+                    a <strong>Murillo Cars</strong> alia tradição e extrema confiança a um ecossistema digital moderno.
+                </p>
+                <p>
+                    Nosso portfólio inclui desde os exóticos mais potentes do mundo até obras e projetos singulares. 
+                    Temos a responsabilidade de garantir que sua pesquisa de compra transcorra de maneira impecável, valorizando 
+                    aquilo que importa: a excelência no fluxo automotivo.
+                </p>
+            </div>
+        </section>
+
+        <section id="contact" class="contact" aria-labelledby="contact-title">
+            <div class="contact-container">
+                <h2 id="contact-title">Entre em Contato ou Agende um Test Drive</h2>
+                <p>Tire suas dúvidas ou escolha experimentar nossos veículos de frota agora mesmo!</p>
+                
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nome Completo</label>
+                        <input type="text" id="name" name="name" required placeholder="Ex: João da Silva" aria-required="true">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" required placeholder="joao@exemplo.com" aria-required="true">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Motivo de Contato</label>
+                        <select id="subject" name="subject" required aria-required="true">
+                            <option value="duvida">Dúvida Geral</option>
+                            <option value="compra">Interesse em Comprar</option>
+                            <option value="testdrive">Agendar Test Drive</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Mensagem Detalhada</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Que veículo você deseja experimentar ou tem dúvidas?" aria-required="true"></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-button" aria-label="Enviar sua mensagem de contato">Enviar Mensagem</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Murillo Cars. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Widget de Acessibilidade Universal -->
+    <div class="a11y-widget" aria-label="Controles Universais de Acessibilidade">
+        <button id="a11y-toggle" class="a11y-toggle-btn" aria-expanded="false" aria-controls="a11y-panel" aria-label="Abrir Menu de Acessibilidade">
+            <span aria-hidden="true" style="font-size:1.6rem">♿</span>
+        </button>
+        <div id="a11y-panel" class="a11y-panel" aria-hidden="true">
+            <h3>Acessibilidade Universal</h3>
+            <button id="btn-increase-text" class="a11y-btn" aria-pressed="false">Texto Maior (+)</button>
+            <button id="btn-decrease-text" class="a11y-btn" aria-pressed="false">Texto Menor (-)</button>
+            <button id="btn-high-contrast" class="a11y-btn" aria-pressed="false">Alto Contraste Visual</button>
+            <button id="btn-dyslexic" class="a11y-btn" aria-pressed="false">Fonte Amigável para Dislexia</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

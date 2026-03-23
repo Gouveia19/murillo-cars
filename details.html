@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Veículo | Murillo Cars</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo" aria-hidden="true">Murillo Cars</div>
+        <nav aria-label="Menu principal">
+            <ul class="nav-links">
+                <li><a href="index.html#home">Início</a></li>
+                <li><a href="index.html#showroom">Catálogo</a></li>
+                <li><a href="index.html#sell">Vender Veículo</a></li>
+            </ul>
+        </nav>
+        <a href="index.html#contact" class="cta-button" aria-label="Voltar para a home e agendar test drive">Agendar Test Drive</a>
+    </header>
+
+    <main class="details-page">
+        <!-- H1 oculto obrigatório por padrão Acessível -->
+        <h1 class="visually-hidden">Visualização Detalhada do Veículo</h1>
+        <section class="details-container" id="car-details" aria-live="polite">
+            <p>Carregando detalhes do veículo...</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Murillo Cars. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Widget de Acessibilidade Universal -->
+    <div class="a11y-widget" aria-label="Controles Universais de Acessibilidade">
+        <button id="a11y-toggle" class="a11y-toggle-btn" aria-expanded="false" aria-controls="a11y-panel" aria-label="Abrir Menu de Acessibilidade">
+            <span aria-hidden="true" style="font-size:1.6rem">♿</span>
+        </button>
+        <div id="a11y-panel" class="a11y-panel" aria-hidden="true">
+            <h3>Acessibilidade Universal</h3>
+            <button id="btn-increase-text" class="a11y-btn" aria-pressed="false">Texto Maior (+)</button>
+            <button id="btn-decrease-text" class="a11y-btn" aria-pressed="false">Texto Padrão</button>
+            <button id="btn-high-contrast" class="a11y-btn" aria-pressed="false">Alto Contraste Visual</button>
+            <button id="btn-dyslexic" class="a11y-btn" aria-pressed="false">Fonte Amigável para Dislexia</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
