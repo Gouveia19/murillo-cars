@@ -415,6 +415,8 @@ a:hover { color: var(--text-primary); }
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
     border-top: 1px solid var(--glass-border);
     padding-top: 1.2rem;
     margin-top: auto;
@@ -430,6 +432,7 @@ a:hover { color: var(--text-primary); }
     display: flex;
     gap: 1rem;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .details-link {
